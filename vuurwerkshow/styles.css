@@ -1,0 +1,1418 @@
+* {
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+
+html {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+body { 
+    margin: 0;
+    background-color: #b4ddf0;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    position: relative;
+    list-style-type: none;
+}
+
+nav ul li span {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: 'Zeyada', cursive;
+    font-size: 2rem;
+}
+
+nav ul input {
+    position: absolute;
+    opacity: 0.3;
+    visibility:hidden;
+}
+
+section {
+    width: 100vw;
+    height: 100vh;
+    background-color: #b4ddf0;
+}
+
+section:nth-child(2) {
+    background-color: #b4ddf0;
+}
+
+section:nth-child(3) {
+    background-color: #b4ddf0;
+}
+
+body:has(input[value="home"]:checked) main {
+    transform: translateX(-100vw);
+}
+
+body:has(input[value="links"]:checked) main {
+    transform: translateX(0);
+}
+
+body:has(input[value="rechts"]:checked) main {
+    transform: translateX(-200vw);
+}
+
+main {
+    width: 300vw;
+    display: flex;
+    transition: 1s ease-in-out;
+}
+
+
+/* Grondstukken */
+
+section:nth-of-type(1) > div:nth-of-type(2) {
+    position: absolute;
+    width: 100vw;
+    bottom:0;
+    height: 30vh;
+    background-color: green;
+    
+}
+
+section:nth-of-type(2) > div:nth-of-type(2) {
+    position: absolute;
+    width: 100vw;
+    bottom:0;
+    height: 30vh;
+    background-color: green;
+    
+}
+
+section:nth-of-type(3) > div:nth-of-type(2) {
+    position: absolute;
+    width: 100vw;
+    bottom:0;
+    height: 30vh;
+    background-color: green;
+    
+}
+
+
+/* !!!!!!!!!!!!!!!!!!!!!! BERGEN gaan van Links naar rechts op het scherm !!!!!!!!!!!!!!!!!!! */
+
+
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!! Berg 1 linker kant!!!!!!!!!!!!!!!!!!!!!!!!! */
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+section:nth-of-type(1) > div:first-of-type { /* container */ 
+    position: absolute;
+    bottom: 30vh;
+    left: -3vw;
+}
+
+section:nth-of-type(1) > div:first-of-type > div:first-of-type { /* De berg */
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0px;
+    border-top: 0px solid transparent;
+    border-right: 130px solid transparent; 
+    border-bottom: 150px solid #68F193; 
+    border-left: 130px solid transparent; 
+    z-index: 5;
+  }
+
+section:nth-of-type(1) > div:first-of-type > div:nth-of-type(2) { /* Schaduw */
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 130px;
+    border-top: 0px solid transparent;
+    border-right: 100px solid transparent; 
+    border-bottom: 150px solid #40945C; 
+    border-left: 0px solid transparent; 
+    z-index: 5;
+    transform-origin: top right;
+    transform: skewX(18deg);
+}
+
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!! Berg 2 Klein variant 2 !!!!!!!!!!!!!!!!!!!!!!!!! */
+
+section:nth-of-type(1) > div:nth-of-type(3) { /* container */ 
+    position: absolute;
+    bottom: 30vh;
+    left: 5vw;
+}
+
+section:nth-of-type(1) > div:nth-of-type(3) > div:first-of-type { /* De berg */
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0px;
+    border-top: 0px solid transparent;
+    border-right: 130px solid transparent; 
+    border-bottom: 130px solid #68F193; 
+    border-left: 130px solid transparent; 
+    z-index: 5;
+  }
+
+section:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(2) { /* Schaduw */
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 130px;
+    border-top: 0px solid transparent;
+    border-right: 100px solid transparent; 
+    border-bottom: 130px solid #40945C; 
+    border-left: 0px solid transparent; 
+    z-index: 5;
+    transform-origin: top right;
+    transform: skewX(18deg);
+}
+
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!! Berg 3 Klein variant 3 !!!!!!!!!!!!!!!!!!!!!!!!! */
+
+section:nth-of-type(1) > div:nth-of-type(4) { /* container */ 
+    position: absolute;
+    bottom: 30vh;
+    left: 8vw;
+    z-index: 3
+}
+
+section:nth-of-type(1) > div:nth-of-type(4) > div:first-of-type { /* De berg */
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0px;
+    border-top: 0px solid transparent;
+    border-right: 130px solid transparent; 
+    border-bottom: 180px solid #68F193; 
+    border-left: 130px solid transparent; 
+    z-index: 5;
+  }
+
+section:nth-of-type(1) > div:nth-of-type(4) > div:nth-of-type(2) { /* Schaduw */
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 130px;
+    border-top: 0px solid transparent;
+    border-right: 100px solid transparent; 
+    border-bottom: 180px solid #40945C; 
+    border-left: 0px solid transparent; 
+    z-index: 5;
+    transform-origin: top right;
+    transform: skewX(18deg);
+}
+
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!! Berg 4 Klein variant 4 !!!!!!!!!!!!!!!!!!!!!!!!! */
+
+section:nth-of-type(1) > div:nth-of-type(5) { /* container */ 
+    position: absolute;
+    bottom: 30vh;
+    left: 16vw;
+}
+
+section:nth-of-type(1) > div:nth-of-type(5) > div:first-of-type { /* De berg */
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0px;
+    border-top: 0px solid transparent;
+    border-right: 130px solid transparent; 
+    border-bottom: 200px solid #68F193; 
+    border-left: 130px solid transparent; 
+    z-index: 5;
+  }
+
+section:nth-of-type(1) > div:nth-of-type(5) > div:nth-of-type(2) { /* Schaduw */
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 130px;
+    border-top: 0px solid transparent;
+    border-right: 100px solid transparent; 
+    border-bottom: 200px solid #40945C; 
+    border-left: 0px solid transparent; 
+    z-index: 5;
+    transform-origin: top right;
+    transform: skewX(18deg);
+}
+
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!! Berg 5 Klein variant 5 !!!!!!!!!!!!!!!!!!!!!!!!! */
+
+section:nth-of-type(1) > div:nth-of-type(6) { /* container */ 
+    position: absolute;
+    bottom: 30vh;
+    left: 25vw;
+    z-index: 4;
+}
+
+section:nth-of-type(1) > div:nth-of-type(6) > div:first-of-type { /* De berg */
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0px;
+    border-top: 0px solid transparent;
+    border-right: 130px solid transparent; 
+    border-bottom: 230px solid #68F193; 
+    border-left: 130px solid transparent; 
+    z-index: 5;
+  }
+
+section:nth-of-type(1) > div:nth-of-type(6) > div:nth-of-type(2) { /* Schaduw */
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 130px;
+    border-top: 0px solid transparent;
+    border-right: 100px solid transparent; 
+    border-bottom: 230px solid #40945C; 
+    border-left: 0px solid transparent; 
+    z-index: 5;
+    transform-origin: top right;
+    transform: skewX(18deg);
+}
+
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!! Berg 6 Klein variant 6 !!!!!!!!!!!!!!!!!!!!!!!!! */
+
+section:nth-of-type(1) > div:nth-of-type(7) { /* container */ 
+    position: absolute;
+    bottom: 30vh;
+    left: 20vw;
+    z-index: 3
+}
+
+section:nth-of-type(1) > div:nth-of-type(7) > div:first-of-type { /* De berg */
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0px;
+    border-top: 0px solid transparent;
+    border-right: 130px solid transparent; 
+    border-bottom: 180px solid #68F193; 
+    border-left: 130px solid transparent; 
+    z-index: 5;
+  }
+
+section:nth-of-type(1) > div:nth-of-type(7) > div:nth-of-type(2) { /* Schaduw */
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 130px;
+    border-top: 0px solid transparent;
+    border-right: 100px solid transparent; 
+    border-bottom: 180px solid #40945C; 
+    border-left: 0px solid transparent; 
+    z-index: 5;
+    transform-origin: top right;
+    transform: skewX(18deg);
+}
+
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!! Berg 7 Klein variant 7 !!!!!!!!!!!!!!!!!!!!!!!!! */
+
+section:nth-of-type(1) > div:nth-of-type(8) { /* container */ 
+    position: absolute;
+    bottom: 30vh;
+    left: 33vw;
+    z-index: 3
+}
+
+section:nth-of-type(1) > div:nth-of-type(8) > div:first-of-type { /* De berg */
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0px;
+    border-top: 0px solid transparent;
+    border-right: 150px solid transparent; 
+    border-bottom: 260px solid #68F193; 
+    border-left: 150px solid transparent; 
+    z-index: 5;
+  }
+
+section:nth-of-type(1) > div:nth-of-type(8) > div:nth-of-type(2) { /* Schaduw */
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 150px;
+    border-top: 0px solid transparent;
+    border-right: 100px solid transparent; 
+    border-bottom: 260px solid #40945C; 
+    border-left: 0px solid transparent; 
+    z-index: 5;
+    transform-origin: top right;
+    transform: skewX(18deg);
+}
+
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!! Berg 8 Klein variant 8 !!!!!!!!!!!!!!!!!!!!!!!!! */
+
+section:nth-of-type(1) > div:nth-of-type(9) { /* container */ 
+    position: absolute;
+    bottom: 30vh;
+    left: 38vw;
+}
+
+section:nth-of-type(1) > div:nth-of-type(9) > div:first-of-type { /* De berg */
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0px;
+    border-top: 0px solid transparent;
+    border-right: 130px solid transparent; 
+    border-bottom: 200px solid #68F193; 
+    border-left: 130px solid transparent; 
+    z-index: 5;
+  }
+
+section:nth-of-type(1) > div:nth-of-type(9) > div:nth-of-type(2) { /* Schaduw */
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 130px;
+    border-top: 0px solid transparent;
+    border-right: 100px solid transparent; 
+    border-bottom: 200px solid #40945C; 
+    border-left: 0px solid transparent; 
+    z-index: 5;
+    transform-origin: top right;
+    transform: skewX(18deg);
+}
+
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!! Berg 9 Klein variant 9 !!!!!!!!!!!!!!!!!!!!!!!!! */
+
+section:nth-of-type(1) > div:nth-of-type(10) { /* container */ 
+    position: absolute;
+    bottom: 30vh;
+    left: 44vw;
+    z-index: 4;
+}
+
+section:nth-of-type(1) > div:nth-of-type(10) > div:first-of-type { /* De berg */
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0px;
+    border-top: 0px solid transparent;
+    border-right: 130px solid transparent; 
+    border-bottom: 230px solid #68F193; 
+    border-left: 130px solid transparent; 
+    z-index: 5;
+  }
+
+section:nth-of-type(1) > div:nth-of-type(10) > div:nth-of-type(2) { /* Schaduw */
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 130px;
+    border-top: 0px solid transparent;
+    border-right: 100px solid transparent; 
+    border-bottom: 230px solid #40945C; 
+    border-left: 0px solid transparent; 
+    z-index: 5;
+    transform-origin: top right;
+    transform: skewX(18deg);
+}
+
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!! Berg 10 Klein variant 10 !!!!!!!!!!!!!!!!!!!!!!!!! */
+
+section:nth-of-type(1) > div:nth-of-type(11) { /* container */ 
+    position: absolute;
+    bottom: 30vh;
+    left: 49vw;
+    z-index: 3
+}
+
+section:nth-of-type(1) > div:nth-of-type(11) > div:first-of-type { /* De berg */
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0px;
+    border-top: 0px solid transparent;
+    border-right: 130px solid transparent; 
+    border-bottom: 180px solid #68F193; 
+    border-left: 130px solid transparent; 
+    z-index: 5;
+  }
+
+section:nth-of-type(1) > div:nth-of-type(11) > div:nth-of-type(2) { /* Schaduw */
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 130px;
+    border-top: 0px solid transparent;
+    border-right: 100px solid transparent; 
+    border-bottom: 180px solid #40945C; 
+    border-left: 0px solid transparent; 
+    z-index: 5;
+    transform-origin: top right;
+    transform: skewX(18deg);
+}
+
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!! Berg 11 Klein variant 11 !!!!!!!!!!!!!!!!!!!!!!!!! */
+
+section:nth-of-type(1) > div:nth-of-type(12) { /* container */ 
+    position: absolute;
+    bottom: 30vh;
+    left: 54vw;
+    z-index: 3
+}
+
+section:nth-of-type(1) > div:nth-of-type(12) > div:first-of-type { /* De berg */
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0px;
+    border-top: 0px solid transparent;
+    border-right: 130px solid transparent; 
+    border-bottom: 180px solid #68F193; 
+    border-left: 130px solid transparent; 
+    z-index: 5;
+  }
+
+section:nth-of-type(1) > div:nth-of-type(12) > div:nth-of-type(2) { /* Schaduw */
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 130px;
+    border-top: 0px solid transparent;
+    border-right: 100px solid transparent; 
+    border-bottom: 180px solid #40945C; 
+    border-left: 0px solid transparent; 
+    z-index: 5;
+    transform-origin: top right;
+    transform: skewX(18deg);
+}
+
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!! Berg 12 met sneeuwstukje !!!!!!!!!!!!!!!!!!!!!!!!! */
+
+
+section:nth-of-type(1) > div:nth-of-type(13) { /* container */ 
+    position: absolute;
+    bottom: 30vh;
+    left: 60vw;
+    z-index:6 ;
+}
+
+section:nth-of-type(1) > div:nth-of-type(13) > div:first-of-type { /* De berg */
+    position: absolute;
+    content: '';
+    bottom: 0;
+    border-top: 0px solid transparent;
+    border-right: 130px solid transparent; 
+    border-bottom: 250px solid #5ad07d; 
+    border-left: 128px solid transparent; 
+    z-index: 5;
+  }
+
+section:nth-of-type(1) > div:nth-of-type(13) > div:nth-of-type(2) { /* Schaduw */
+    position: absolute;
+    content: '';
+    bottom: 0;
+    margin-left: 130px; /*positie schaduw */
+    border-top: 0px solid transparent;
+    border-right: 100px solid transparent; 
+    border-bottom: 250px solid #357639; 
+    border-left: 0px solid transparent; 
+    z-index: 5;
+    transform-origin: top right;
+    transform: skewX(18deg);
+}
+
+
+section:nth-of-type(1) > div:nth-of-type(13) > div:first-child > div:first-child { /* Sneeuw  */
+    position: absolute;
+    content: '';
+    bottom: -98px;
+    left: -50px;
+    border-top: 0px solid transparent;
+    border-right: 50px solid transparent; 
+    border-bottom: 100px solid #dddddd; 
+    border-left: 50px solid transparent; 
+    z-index: 6;
+}
+
+section:nth-of-type(1) > div:nth-of-type(13) > div:nth-of-type(2) > div { /* Sneeuw schaduw */
+    position: absolute;
+    content: '';
+    bottom: -87px;
+    left: 0px;
+    border-top: 0px solid transparent;
+    border-right: 35px solid transparent; 
+    border-bottom: 100px solid #cccccc; 
+    border-left: 0px solid transparent; 
+    z-index: 6;
+    transform-origin: top right;
+    transform: skewY(-18deg);
+}
+
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!! Berg 13 met sneeuwstukje !!!!!!!!!!!!!!!!!!!!!!!!! */
+
+
+section:nth-of-type(1) > div:nth-of-type(14) { /* container */ 
+    position: absolute;
+    bottom: 30vh;
+    left: 65vw;
+    z-index:6 ;
+}
+
+section:nth-of-type(1) > div:nth-of-type(14) > div:first-of-type { /* De berg */
+    position: absolute;
+    content: '';
+    bottom: 0;
+    border-top: 0px solid transparent;
+    border-right: 140px solid transparent; 
+    border-bottom: 300px solid #5ad07d; 
+    border-left: 150px solid transparent; 
+    z-index: 5;
+  }
+
+section:nth-of-type(1) > div:nth-of-type(14) > div:nth-of-type(2) { /* Schaduw */
+    position: absolute;
+    content: '';
+    bottom: 0;
+    margin-left: 150px; /*positie schaduw */
+    border-top: 0px solid transparent;
+    border-right: 120px solid transparent; 
+    border-bottom: 300px solid #357639; 
+    border-left: 0px solid transparent; 
+    z-index: 5;
+    transform-origin: top right;
+    transform: skewX(18deg);
+}
+
+
+section:nth-of-type(1) > div:nth-of-type(14) > div:first-child > div:first-child { /* Sneeuw  */
+    position: absolute;
+    content: '';
+    bottom: -98px;
+    left: -50px;
+    border-top: 0px solid transparent;
+    border-right: 50px solid transparent; 
+    border-bottom: 100px solid #dddddd; 
+    border-left: 50px solid transparent; 
+    z-index: 6;
+}
+
+section:nth-of-type(1) > div:nth-of-type(14) > div:nth-of-type(2) > div { /* Sneeuw schaduw */
+    position: absolute;
+    content: '';
+    bottom: -87px;
+    left: 0px;
+    border-top: 0px solid transparent;
+    border-right: 35px solid transparent; 
+    border-bottom: 100px solid #cccccc; 
+    border-left: 0px solid transparent; 
+    z-index: 6;
+    transform-origin: top right;
+    transform: skewY(-18deg);
+}
+
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!! Berg 14 met sneeuwstukje !!!!!!!!!!!!!!!!!!!!!!!!! */
+
+
+section:nth-of-type(1) > div:nth-of-type(15) { /* container */ 
+    position: absolute;
+    bottom: 30vh;
+    left: 70vw;
+    z-index:2 ;
+}
+
+section:nth-of-type(1) > div:nth-of-type(15) > div:first-of-type { /* De berg */
+    position: absolute;
+    content: '';
+    bottom: 0;
+    border-top: 0px solid transparent;
+    border-right: 140px solid transparent; 
+    border-bottom: 330px solid #5ad07d; 
+    border-left: 150px solid transparent; 
+    z-index: 5;
+  }
+
+section:nth-of-type(1) > div:nth-of-type(15) > div:nth-of-type(2) { /* Schaduw */
+    position: absolute;
+    content: '';
+    bottom: 0;
+    margin-left: 150px; /*positie schaduw */
+    border-top: 0px solid transparent;
+    border-right: 120px solid transparent; 
+    border-bottom: 330px solid #357639; 
+    border-left: 0px solid transparent; 
+    z-index: 5;
+    transform-origin: top right;
+    transform: skewX(18deg);
+}
+
+
+section:nth-of-type(1) > div:nth-of-type(15) > div:first-child > div:first-child { /* Sneeuw  */
+    position: absolute;
+    content: '';
+    bottom: -98px;
+    left: -50px;
+    border-top: 0px solid transparent;
+    border-right: 50px solid transparent; 
+    border-bottom: 100px solid #dddddd; 
+    border-left: 50px solid transparent; 
+    z-index: 6;
+}
+
+section:nth-of-type(1) > div:nth-of-type(15) > div:nth-of-type(2) > div { /* Sneeuw schaduw */
+    position: absolute;
+    content: '';
+    bottom: -87px;
+    left: 0px;
+    border-top: 0px solid transparent;
+    border-right: 35px solid transparent; 
+    border-bottom: 100px solid #cccccc; 
+    border-left: 0px solid transparent; 
+    z-index: 6;
+    transform-origin: top right;
+    transform: skewY(-18deg);
+}
+
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!! Berg 15 Klein variant 6 !!!!!!!!!!!!!!!!!!!!!!!!! */
+
+section:nth-of-type(1) > div:nth-of-type(16) { /* container */ 
+    position: absolute;
+    bottom: 30vh;
+    left: 73vw;
+    z-index: 9
+}
+
+section:nth-of-type(1) > div:nth-of-type(16) > div:first-of-type { /* De berg */
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0px;
+    border-top: 0px solid transparent;
+    border-right: 130px solid transparent; 
+    border-bottom: 180px solid #68F193; 
+    border-left: 130px solid transparent; 
+    z-index: 5;
+  }
+
+section:nth-of-type(1) > div:nth-of-type(16) > div:nth-of-type(2) { /* Schaduw */
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 130px;
+    border-top: 0px solid transparent;
+    border-right: 100px solid transparent; 
+    border-bottom: 180px solid #40945C; 
+    border-left: 0px solid transparent; 
+    z-index: 5;
+    transform-origin: top right;
+    transform: skewX(18deg);
+}
+
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!! Berg 16 Klein variant 7 !!!!!!!!!!!!!!!!!!!!!!!!! */
+
+section:nth-of-type(1) > div:nth-of-type(17) { /* container */ 
+    position: absolute;
+    bottom: 30vh;
+    left: 78vw;
+    z-index: 3
+}
+
+section:nth-of-type(1) > div:nth-of-type(17) > div:first-of-type { /* De berg */
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0px;
+    border-top: 0px solid transparent;
+    border-right: 150px solid transparent; 
+    border-bottom: 260px solid #68F193; 
+    border-left: 150px solid transparent; 
+    z-index: 5;
+  }
+
+section:nth-of-type(1) > div:nth-of-type(17) > div:nth-of-type(2) { /* Schaduw */
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 150px;
+    border-top: 0px solid transparent;
+    border-right: 100px solid transparent; 
+    border-bottom: 260px solid #40945C; 
+    border-left: 0px solid transparent; 
+    z-index: 5;
+    transform-origin: top right;
+    transform: skewX(18deg);
+}
+
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!! Berg 17 met sneeuwstukje !!!!!!!!!!!!!!!!!!!!!!!!! */
+
+
+section:nth-of-type(1) > div:nth-of-type(18) { /* container */ 
+    position: absolute;
+    bottom: 30vh;
+    left: 85vw;
+    z-index:2 ;
+}
+
+section:nth-of-type(1) > div:nth-of-type(18) > div:first-of-type { /* De berg */
+    position: absolute;
+    content: '';
+    bottom: 0;
+    border-top: 0px solid transparent;
+    border-right: 240px solid transparent; 
+    border-bottom: 330px solid #5ad07d; 
+    border-left: 240px solid transparent; 
+    z-index: 5;
+  }
+
+section:nth-of-type(1) > div:nth-of-type(18) > div:nth-of-type(2) { /* Schaduw */
+    position: absolute;
+    content: '';
+    bottom: 0;
+    margin-left: 240px; /*positie schaduw */
+    border-top: 0px solid transparent;
+    border-right: 240px solid transparent; 
+    border-bottom: 330px solid #357639; 
+    border-left: 0px solid transparent; 
+    z-index: 5;
+    transform-origin: top right;
+    transform: skewX(18deg);
+}
+
+
+section:nth-of-type(1) > div:nth-of-type(18) > div:first-child > div:first-child { /* Sneeuw  */
+    position: absolute;
+    content: '';
+    bottom: -99px;
+    left: -72px;
+    border-top: 0px solid transparent;
+    border-right: 50px solid transparent; 
+    border-bottom: 100px solid #dddddd; 
+    border-left: 71px solid transparent; 
+    z-index: 6;
+}
+
+section:nth-of-type(1) > div:nth-of-type(18) > div:nth-of-type(2) > div { /* Sneeuw schaduw */
+    position: absolute;
+    content: '';
+    bottom: -80px;
+    left: 0;
+    border-top: 0px solid transparent;
+    border-right: 60px solid transparent; 
+    border-bottom: 100px solid #cccccc; 
+    border-left: 0px solid transparent; 
+    z-index: 6;
+    transform-origin: top right;
+    transform: skewY(-18deg);
+}
+
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!! Berg 1 Middelste scherm!!!!!!!!!!!!!!!!!!!!! */
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+section:nth-of-type(2) > div:first-of-type { /* container */ 
+    position: absolute;
+    bottom: 30vh;
+}
+
+section:nth-of-type(2) > div:first-of-type > div:first-of-type { /* De berg */
+    position: absolute;
+    content: '';
+    bottom: 0;
+    border-top: 0px solid transparent;
+    border-right: 180px solid transparent; /*Rechterkant berg*/
+    border-bottom: 350px solid #5ad07d; /*Hoogte van de berg*/
+    border-left: 180px solid transparent; /*Linkerkant berg*/
+    z-index: 5;
+  }
+
+section:nth-of-type(2) > div:first-of-type > div:nth-of-type(2) { /* Schaduw */
+    position: absolute;
+    content: '';
+    bottom: 0;
+    margin-left: 180px; /*positie schaduw */
+    border-top: 0px solid transparent;
+    border-right: 140px solid transparent; 
+    border-bottom: 350px solid #357639; 
+    border-left: 0px solid transparent; 
+    z-index: 5;
+    transform-origin: top right;
+    transform: skewX(18deg);
+}
+
+
+section:nth-of-type(2) > div:first-of-type > div:first-child > div:first-child { /* Sneeuw  */
+    position: absolute;
+    content: '';
+    bottom: -98px;
+    left: -50px;
+    border-top: 0px solid transparent;
+    border-right: 50px solid transparent; 
+    border-bottom: 100px solid #dddddd; 
+    border-left: 50px solid transparent; 
+    z-index: 6;
+}
+
+section:nth-of-type(2) > div:first-of-type> div:nth-of-type(2) > div { /* Sneeuw schaduw */
+    position: absolute;
+    content: '';
+    bottom: -87px;
+    left: 0px;
+    border-top: 0px solid transparent;
+    border-right: 35px solid transparent; 
+    border-bottom: 100px solid #cccccc; 
+    border-left: 0px solid transparent; 
+    z-index: 6;
+    transform-origin: top right;
+    transform: skewY(-18deg);
+}
+
+
+section:nth-of-type(2) > div:first-of-type > div:first-child > div:last-child {  /* stukje sneeuw inverted */
+    position: absolute;
+    content: '';
+    bottom: -130px;
+    left: -45px;
+    border-top: 40px solid #dddddd; 
+    border-right: 25px solid transparent;
+    border-bottom: 0px solid transparent;
+    border-left: 25px solid transparent;
+    z-index: 6;
+}
+
+
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!! Berg 2 Lagere variant met sneeuwtopje !!!!!!!!!!!!!!!!!!!!!!!!! */
+
+
+section:nth-of-type(2) > div:nth-of-type(3) { /* container */ 
+    position: absolute;
+    bottom: 30vh;
+    left: 110vw;
+    z-index:4
+}
+
+section:nth-of-type(2) > div:nth-of-type(3) > div:first-of-type { /* De berg */
+    position: absolute;
+    content: '';
+    bottom: 0;
+    border-top: 0px solid transparent;
+    border-right: 130px solid transparent; 
+    border-bottom: 250px solid #5ad07d; 
+    border-left: 130px solid transparent; 
+    z-index: 5;
+  }
+
+section:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(2) { /* Schaduw */
+    position: absolute;
+    content: '';
+    bottom: 0;
+    margin-left: 130px; /*positie schaduw */
+    border-top: 0px solid transparent;
+    border-right: 100px solid transparent; 
+    border-bottom: 250px solid #357639; 
+    border-left: 0px solid transparent; 
+    z-index: 5;
+    transform-origin: top right;
+    transform: skewX(18deg);
+}
+
+
+section:nth-of-type(2) > div:nth-of-type(3) > div:first-child > div:first-child { /* Sneeuw  */
+    position: absolute;
+    content: '';
+    bottom: -98px;
+    left: -50px;
+    border-top: 0px solid transparent;
+    border-right: 50px solid transparent; 
+    border-bottom: 100px solid #dddddd; 
+    border-left: 50px solid transparent; 
+    z-index: 6;
+}
+
+section:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(2) > div { /* Sneeuw schaduw */
+    position: absolute;
+    content: '';
+    bottom: -87px;
+    left: 0px;
+    border-top: 0px solid transparent;
+    border-right: 35px solid transparent; 
+    border-bottom: 100px solid #cccccc; 
+    border-left: 0px solid transparent; 
+    z-index: 6;
+    transform-origin: top right;
+    transform: skewY(-18deg);
+}
+
+
+section:nth-of-type(2) > div:nth-of-type(3) > div:first-child > div:last-child { /* Sneeuwdruppel */
+    position: absolute;
+    content: '';
+    bottom: -130px;
+    left: -20px;
+    border-top: 40px solid #dddddd;
+    border-right: 25px solid transparent;
+    border-bottom: 0px solid transparent;
+    border-left: 25px solid transparent;
+    z-index: 6;
+}
+
+
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!! Berg 3 Klein bergje !!!!!!!!!!!!!!!!!!!!!!!!! */
+
+
+section:nth-of-type(2) > div:nth-of-type(4) { /* container */ 
+    position: absolute;
+    bottom: 30vh;
+    left: 120vw;
+    z-index:4
+}
+
+section:nth-of-type(2) > div:nth-of-type(4) > div:first-of-type { /* De berg */
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 60px;
+    border-top: 0px solid transparent;
+    border-right: 130px solid transparent; 
+    border-bottom: 150px solid #68F193; 
+    border-left: 130px solid transparent; 
+    z-index: 5;
+  }
+
+section:nth-of-type(2) > div:nth-of-type(4) > div:nth-of-type(2) { /* Schaduw */
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 190px;
+    border-top: 0px solid transparent;
+    border-right: 100px solid transparent; 
+    border-bottom: 150px solid #40945C; 
+    border-left: 0px solid transparent; 
+    z-index: 5;
+    transform-origin: top right;
+    transform: skewX(18deg);
+}
+
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!! Berg 4 Klein variant 9 !!!!!!!!!!!!!!!!!!!!!!!!! */
+
+section:nth-of-type(2) > div:nth-of-type(5) { /* container */ 
+    position: absolute;
+    bottom: 30vh;
+    left: 130vw;
+    z-index: 4;
+}
+
+section:nth-of-type(2) > div:nth-of-type(5) > div:first-of-type { /* De berg */
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0px;
+    border-top: 0px solid transparent;
+    border-right: 130px solid transparent; 
+    border-bottom: 230px solid #68F193; 
+    border-left: 130px solid transparent; 
+    z-index: 5;
+  }
+
+section:nth-of-type(2) > div:nth-of-type(5) > div:nth-of-type(2) { /* Schaduw */
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 130px;
+    border-top: 0px solid transparent;
+    border-right: 100px solid transparent; 
+    border-bottom: 230px solid #40945C; 
+    border-left: 0px solid transparent; 
+    z-index: 5;
+    transform-origin: top right;
+    transform: skewX(18deg);
+}
+
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!! Berg 5 Klein variant 10 !!!!!!!!!!!!!!!!!!!!!!!!! */
+
+section:nth-of-type(2) > div:nth-of-type(6) { /* container */ 
+    position: absolute;
+    bottom: 30vh;
+    left: 120vw;
+    z-index: 3
+}
+
+section:nth-of-type(2) > div:nth-of-type(6) > div:first-of-type { /* De berg */
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0px;
+    border-top: 0px solid transparent;
+    border-right: 130px solid transparent; 
+    border-bottom: 180px solid #68F193; 
+    border-left: 130px solid transparent; 
+    z-index: 5;
+  }
+
+section:nth-of-type(2) > div:nth-of-type(6) > div:nth-of-type(2) { /* Schaduw */
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 130px;
+    border-top: 0px solid transparent;
+    border-right: 100px solid transparent; 
+    border-bottom: 180px solid #40945C; 
+    border-left: 0px solid transparent; 
+    z-index: 5;
+    transform-origin: top right;
+    transform: skewX(18deg);
+}
+
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!! Berg 6 Klein variant 11 !!!!!!!!!!!!!!!!!!!!!!!!! */
+
+section:nth-of-type(2) > div:nth-of-type(7) { /* container */ 
+    position: absolute;
+    bottom: 30vh;
+    left: 140vw;
+    z-index: 3
+}
+
+section:nth-of-type(2) > div:nth-of-type(7) > div:first-of-type { /* De berg */
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0px;
+    border-top: 0px solid transparent;
+    border-right: 130px solid transparent; 
+    border-bottom: 180px solid #68F193; 
+    border-left: 130px solid transparent; 
+    z-index: 5;
+  }
+
+section:nth-of-type(2) > div:nth-of-type(7) > div:nth-of-type(2) { /* Schaduw */
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 130px;
+    border-top: 0px solid transparent;
+    border-right: 100px solid transparent; 
+    border-bottom: 180px solid #40945C; 
+    border-left: 0px solid transparent; 
+    z-index: 5;
+    transform-origin: top right;
+    transform: skewX(18deg);
+}
+
+
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!! Berg 7 met sneeuwstukje !!!!!!!!!!!!!!!!!!!!!!!!! */
+
+
+section:nth-of-type(2) > div:nth-of-type(8) { /* container */ 
+    position: absolute;
+    bottom: 30vh;
+    left: 145vw;
+    z-index:2 ;
+}
+
+section:nth-of-type(2) > div:nth-of-type(8) > div:first-of-type { /* De berg */
+    position: absolute;
+    content: '';
+    bottom: 0;
+    border-top: 0px solid transparent;
+    border-right: 240px solid transparent; 
+    border-bottom: 400px solid #5ad07d; 
+    border-left: 240px solid transparent; 
+    z-index: 5;
+  }
+
+section:nth-of-type(2) > div:nth-of-type(8) > div:nth-of-type(2) { /* Schaduw */
+    position: absolute;
+    content: '';
+    bottom: 0;
+    margin-left: 240px; /*positie schaduw */
+    border-top: 0px solid transparent;
+    border-right: 290px solid transparent; 
+    border-bottom: 400px solid #357639; 
+    border-left: 0px solid transparent; 
+    z-index: 5;
+    transform-origin: top right;
+    transform: skewX(18deg);
+}
+
+
+section:nth-of-type(2) > div:nth-of-type(8) > div:first-child > div:first-child { /* Sneeuw  */
+    position: absolute;
+    content: '';
+    bottom: -99px;
+    left: -62px;
+    border-top: 0px solid transparent;
+    border-right: 70px solid transparent; 
+    border-bottom: 100px solid #dddddd; 
+    border-left: 60px solid transparent; 
+    z-index: 6;
+}
+
+section:nth-of-type(2) > div:nth-of-type(8) > div:nth-of-type(2) > div { /* Sneeuw schaduw */
+    position: absolute;
+    content: '';
+    bottom: -80px;
+    left: 0;
+    border-top: 0px solid transparent;
+    border-right: 60px solid transparent; 
+    border-bottom: 100px solid #cccccc; 
+    border-left: 0px solid transparent; 
+    z-index: 6;
+    transform-origin: top right;
+    transform: skewY(-18deg);
+}
+
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!! Berg 8 met sneeuwstukje !!!!!!!!!!!!!!!!!!!!!!!!! */
+
+
+section:nth-of-type(2) > div:nth-of-type(9) { /* container */ 
+    position: absolute;
+    bottom: 30vh;
+    left: 160vw;
+}
+
+section:nth-of-type(2) > div:nth-of-type(9) > div:first-of-type { /* De berg */
+    position: absolute;
+    content: '';
+    bottom: 0;
+    border-top: 0px solid transparent;
+    border-right: 180px solid transparent; /*Rechterkant berg*/
+    border-bottom: 350px solid #68F193; /*Hoogte van de berg*/
+    border-left: 180px solid transparent; /*Linkerkant berg*/
+    z-index: 5;
+  }
+
+section:nth-of-type(2) > div:nth-of-type(9) > div:nth-of-type(2) { /* Schaduw */
+    position: absolute;
+    content: '';
+    bottom: 0;
+    margin-left: 180px; /*positie schaduw */
+    border-top: 0px solid transparent;
+    border-right: 140px solid transparent; 
+    border-bottom: 350px solid #357639; 
+    border-left: 0px solid transparent; 
+    z-index: 5;
+    transform-origin: top right;
+    transform: skewX(18deg);
+}
+
+
+section:nth-of-type(2) > div:nth-of-type(9) > div:first-child > div:first-child { /* Sneeuw  */
+    position: absolute;
+    content: '';
+    bottom: -98px;
+    left: -50px;
+    border-top: 0px solid transparent;
+    border-right: 50px solid transparent; 
+    border-bottom: 100px solid #dddddd; 
+    border-left: 50px solid transparent; 
+    z-index: 6;
+}
+
+section:nth-of-type(2) > div:nth-of-type(9) > div:nth-of-type(2) > div { /* Sneeuw schaduw */
+    position: absolute;
+    content: '';
+    bottom: -87px;
+    left: 0px;
+    border-top: 0px solid transparent;
+    border-right: 35px solid transparent; 
+    border-bottom: 100px solid #cccccc; 
+    border-left: 0px solid transparent; 
+    z-index: 6;
+    transform-origin: top right;
+    transform: skewY(-18deg);
+}
+
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!! Berg 9 Klein variant 5 !!!!!!!!!!!!!!!!!!!!!!!!! */
+
+section:nth-of-type(2) > div:nth-of-type(10) { /* container */ 
+    position: absolute;
+    bottom: 30vh;
+    left: 175vw;
+    z-index: 4;
+}
+
+section:nth-of-type(2) > div:nth-of-type(10) > div:first-of-type { /* De berg */
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0px;
+    border-top: 0px solid transparent;
+    border-right: 130px solid transparent; 
+    border-bottom: 230px solid #68F193; 
+    border-left: 130px solid transparent; 
+    z-index: 5;
+  }
+
+section:nth-of-type(2) > div:nth-of-type(10) > div:nth-of-type(2) { /* Schaduw */
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 130px;
+    border-top: 0px solid transparent;
+    border-right: 100px solid transparent; 
+    border-bottom: 230px solid #40945C; 
+    border-left: 0px solid transparent; 
+    z-index: 5;
+    transform-origin: top right;
+    transform: skewX(18deg);
+}
+
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!! Berg 10 Klein variant 6 !!!!!!!!!!!!!!!!!!!!!!!!! */
+
+section:nth-of-type(2) > div:nth-of-type(11) { /* container */ 
+    position: absolute;
+    bottom: 30vh;
+    left: 180vw;
+    z-index: 3
+}
+
+section:nth-of-type(2) > div:nth-of-type(11) > div:first-of-type { /* De berg */
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0px;
+    border-top: 0px solid transparent;
+    border-right: 130px solid transparent; 
+    border-bottom: 180px solid #68F193; 
+    border-left: 130px solid transparent; 
+    z-index: 5;
+  }
+
+section:nth-of-type(2) > div:nth-of-type(11) > div:nth-of-type(2) { /* Schaduw */
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 130px;
+    border-top: 0px solid transparent;
+    border-right: 100px solid transparent; 
+    border-bottom: 180px solid #40945C; 
+    border-left: 0px solid transparent; 
+    z-index: 5;
+    transform-origin: top right;
+    transform: skewX(18deg);
+}
+
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!! Berg 11 Klein variant 7 !!!!!!!!!!!!!!!!!!!!!!!!! */
+
+section:nth-of-type(2) > div:nth-of-type(12) { /* container */ 
+    position: absolute;
+    bottom: 30vh;
+    left: 185vw;
+    z-index: 3
+}
+
+section:nth-of-type(2) > div:nth-of-type(12) > div:first-of-type { /* De berg */
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0px;
+    border-top: 0px solid transparent;
+    border-right: 150px solid transparent; 
+    border-bottom: 260px solid #68F193; 
+    border-left: 150px solid transparent; 
+    z-index: 5;
+  }
+
+section:nth-of-type(2) > div:nth-of-type(12) > div:nth-of-type(2) { /* Schaduw */
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 150px;
+    border-top: 0px solid transparent;
+    border-right: 100px solid transparent; 
+    border-bottom: 260px solid #40945C; 
+    border-left: 0px solid transparent; 
+    z-index: 5;
+    transform-origin: top right;
+    transform: skewX(18deg);
+}
+
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!! Berg 1 rechter kant!!!!!!!!!!!!!!!!!!!!!!!!! */
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+section:nth-of-type(3) > div:first-of-type { /* container */ 
+    position: absolute;
+    bottom: 30vh;
+}
+
+section:nth-of-type(3) > div:first-of-type > div:first-of-type { /* De berg */
+    position: absolute;
+    content: '';
+    bottom: 0;
+    border-top: 0px solid transparent;
+    border-right: 180px solid transparent; /*Rechterkant berg*/
+    border-bottom: 350px solid #5ad07d; /*Hoogte van de berg*/
+    border-left: 180px solid transparent; /*Linkerkant berg*/
+    z-index: 5;
+  }
+
+section:nth-of-type(3) > div:first-of-type > div:nth-of-type(2) { /* Schaduw */
+    position: absolute;
+    content: '';
+    bottom: 0;
+    margin-left: 180px; /*positie schaduw */
+    border-top: 0px solid transparent;
+    border-right: 140px solid transparent; 
+    border-bottom: 350px solid #357639; 
+    border-left: 0px solid transparent; 
+    z-index: 5;
+    transform-origin: top right;
+    transform: skewX(18deg);
+}
+
+
+section:nth-of-type(3) > div:first-of-type > div:first-child > div:first-child { /* Sneeuw  */
+    position: absolute;
+    content: '';
+    bottom: -98px;
+    left: -50px;
+    border-top: 0px solid transparent;
+    border-right: 50px solid transparent; 
+    border-bottom: 100px solid #dddddd; 
+    border-left: 50px solid transparent; 
+    z-index: 6;
+}
+
+section:nth-of-type(3) > div:first-of-type> div:nth-of-type(2) > div { /* Sneeuw schaduw */
+    position: absolute;
+    content: '';
+    bottom: -87px;
+    left: 0px;
+    border-top: 0px solid transparent;
+    border-right: 35px solid transparent; 
+    border-bottom: 100px solid #cccccc; 
+    border-left: 0px solid transparent; 
+    z-index: 6;
+    transform-origin: top right;
+    transform: skewY(-18deg);
+}
+
+
+section:nth-of-type(3) > div:first-of-type > div:first-child > div:last-child {  /* stukje sneeuw inverted */
+    position: absolute;
+    content: '';
+    bottom: -130px;
+    left: -45px;
+    border-top: 40px solid #dddddd; 
+    border-right: 25px solid transparent;
+    border-bottom: 0px solid transparent;
+    border-left: 25px solid transparent;
+    z-index: 6;
+}
+
+
+
+
+
+
+
+
