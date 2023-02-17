@@ -24,3 +24,8 @@ functionaliteiten:
 
 <img src="images/schets_css1.jpg" width=500px>
 
+Je ziet hier hoe de drie verschillende views ontworpen moeten worden. Ook zie je de klikbare pijlen die voor interactie zorgen.
+
+
+
+
