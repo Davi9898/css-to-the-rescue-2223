@@ -32,7 +32,7 @@ Deze week heb ik de lessen gemist omdat ik ziek was. Ondertussen ben ik thuis we
 
 ### Bergjes
 
-De bergjes heb ik gemaakt door gebruik te maken van de volgende code:
+De bergen heb ik gemaakt door gebruik te maken van de volgende code:
 <code>
 section:nth-of-type(1) > div:first-of-type { /* container, hiermee kan ik de berg gemakkelijk bewegen */ 
     position: absolute;
@@ -65,5 +65,27 @@ section:nth-of-type(1) > div:first-of-type > div:nth-of-type(2) { /* De schaduw 
     transform-origin: top right;
     transform: skewX(18deg);
 }
+</code>
+
+Het verplaatsen van het scherm heb ik gemaakt door middel van radio buttons:
+<code>
+    <li>
+                    <label for="links">
+                        <span>Links</span>
+                        <input type="radio" id="links" name="nav" value="links" />
+                    </label>
+                </li>
+
+                <li>
+                    <label for="home">
+                        <span>Home</span>
+                        <input type="radio" id="home" name="nav" value="home" checked />
+                    </label>
+                </li>
+
+                <li>
+                    <label for="rechts">
+                        <input type="radio" id="rechts" name="nav" value="rechts" />
+                    </label>
 </code>
 
