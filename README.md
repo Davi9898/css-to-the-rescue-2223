@@ -26,6 +26,44 @@ functionaliteiten:
 
 Je ziet hier hoe de drie verschillende views ontworpen moeten worden. Ook zie je de klikbare pijlen die voor interactie zorgen.
 
+# Week 2
 
+Deze week heb ik de lessen gemist omdat ik ziek was. Ondertussen ben ik thuis wel verder gaan werken aan mijn berglandschap
+
+### Bergjes
+
+De bergjes heb ik gemaakt door gebruik te maken van de volgende code:
+
+section:nth-of-type(1) > div:first-of-type { /* container, hiermee kan ik de berg gemakkelijk bewegen */ 
+    position: absolute;
+    bottom: 30vh;
+    left: -3vw;
+}
+
+section:nth-of-type(1) > div:first-of-type > div:first-of-type { /* De berg zelf kan ik hier groter en kleiner maken. */
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0px;
+    border-top: 0px solid transparent;
+    border-right: 130px solid transparent; 
+    border-bottom: 150px solid #68F193; 
+    border-left: 130px solid transparent; 
+    z-index: 5;
+  }
+
+section:nth-of-type(1) > div:first-of-type > div:nth-of-type(2) { /* De schaduw van de berg kan ik hier aanpassen */
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 130px;
+    border-top: 0px solid transparent;
+    border-right: 100px solid transparent; 
+    border-bottom: 150px solid #40945C; 
+    border-left: 0px solid transparent; 
+    z-index: 5;
+    transform-origin: top right;
+    transform: skewX(18deg);
+}
 
 
