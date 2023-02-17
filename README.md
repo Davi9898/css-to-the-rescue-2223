@@ -66,6 +66,8 @@ section:nth-of-type(1) > div:first-of-type > div:nth-of-type(2) { /* De schaduw 
     transform: skewX(18deg);
 }
 </code>
+Vervolgens heb ik veel verschillende soorten bergen gemaakt en deze genaamd variaties. Deze kan ik groter maken doormiddel van transfrom: scale(1.1)
+
 
 Het verplaatsen van het scherm heb ik gemaakt door middel van radio buttons:
 <code>
@@ -88,4 +90,3 @@ Het verplaatsen van het scherm heb ik gemaakt door middel van radio buttons:
                         <input type="radio" id="rechts" name="nav" value="rechts" />
                     </label>
 </code>
-
