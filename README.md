@@ -33,7 +33,7 @@ Deze week heb ik de lessen gemist omdat ik ziek was. Ondertussen ben ik thuis we
 ### Bergjes
 
 De bergjes heb ik gemaakt door gebruik te maken van de volgende code:
-
+`
 section:nth-of-type(1) > div:first-of-type { /* container, hiermee kan ik de berg gemakkelijk bewegen */ 
     position: absolute;
     bottom: 30vh;
@@ -65,5 +65,5 @@ section:nth-of-type(1) > div:first-of-type > div:nth-of-type(2) { /* De schaduw 
     transform-origin: top right;
     transform: skewX(18deg);
 }
-
+`
 
