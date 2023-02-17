@@ -11,6 +11,16 @@ Voor het vak CSS to the rescue ga ik een vuurwerkshow maken. De bedoeling is dat
 
 Ik ben er snel achter gekomen deze week dat ik niet kan gaan scrollen om de pagina naar links en naar rechts te laten bewegen. Hiervoor ga ik radio buttons gebruiken en de :has() selector toepassen. De bergen ga ik maken doormiddel van driehoekjes en met schaduwen. 
 
+functionaliteiten:
+- Scherm van het midden naar links en rechts kunnen bewegen.
+- Bergen 
+- Light/Dark mode door middel van op de zon te klikken
+- Berg laten wegvliegen door erop te klikken (easter egg)
+- Vuurpijlen / Vuurdozen
+- Nice colors.
+- Responsive ( media queries om bergen te verwijderen wanneer scherm kleiner wordt) 
+
 ### Schetsen
 
+<img src="images/schets_css1.jpg" width=500px>
 
