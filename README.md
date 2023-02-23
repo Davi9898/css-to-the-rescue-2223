@@ -122,3 +122,115 @@ functionaliteiten die ik nog wil toevoegen:
 - Berg laten wegvliegen door erop te klikken (easter egg)
 - Vuurpijlen / Vuurdozen die exploderen.
 - Responsive ( media queries om bergen te verwijderen wanneer scherm kleiner wordt)
+
+### Dag 2
+Op dag 2 zijn we begonnen met een gastcollege van Manuel Matuzovic. Manuel is schrijver van het blog 100days of More or less modern CSS, hij heeft ons allerlei epische properties laten zien die CSS met zich mee draagt. Vervolgens ben ik met Sanne gaan zitten om te kijken naar custom properties. Ik kreeg een privé sessie omdat niemand anders zich hiervoor had aangemeld. Hierin gingen we mijn huidge bergen transformeren met een border-width zodat we custom properties makkelijk konden gebruiken. Hier stak ik veel van op en kreeg ik door hoe ik deze functionaliteit kan toepassen. 
+
+Vervolgens lukte het me niet om het ijstopje op de berg te plaatsen op de manier waarop we nu de bergen hadden ge hercreëerd. Sanne vond de manier waarop het ging sowieso al lelijk volgensmij dus had hij het geniale idee om nogmaals de bergen te transformeren naar een nieuw landschap. Dit keer met bergen met wel een sneeuwstukje er boven op. Hieronder valt te zien hoe we dit gedaan hebben.
+<code>
+
+/*************/
+/* SETTINGS  */
+/*************/
+section:nth-of-type(1) ul {
+	display:flex;
+	align-items:end;
+	justify-content:center;
+	margin:0;
+	padding:0;
+	list-style:none;
+
+
+	background-color:transparent;
+}
+
+section:nth-of-type(1) li {
+	position:absolute;
+	bottom:15vw; 
+	width:var(--width, 10em);
+	height:var(--height, 10em);
+	
+	left:var(--left, 0);
+	z-index:var(--z-index, 0);
+}
+
+section:nth-of-type(1) li > div {
+	position:absolute;
+	inset:0;
+}
+
+section:nth-of-type(1) li > div:nth-of-type(1) {
+	background-color:var(--clr-sun, lightgreen);
+
+	clip-path: polygon(
+		var(--point, 50%) 0%, 
+		var(--shade, 50%) 100%, 
+		0% 100%, 
+		var(--point, 50%) 0%
+	);
+
+}
+
+section:nth-of-type(1) li > div:nth-of-type(2) {
+	background-color:var(--clr-shade, green);
+	
+	clip-path: polygon(
+		var(--point, 50%) 0%, 
+		var(--shade, 50%) 100%, 
+		100% 100%, 
+		var(--point, 50%) 0%
+	);
+
+}
+
+/* snow */
+section:nth-of-type(1) div div {
+	position:absolute;
+	width:100%;
+	height:var(--snow, 40%);
+}
+
+section:nth-of-type(1) div div {
+	clip-path: polygon(36% 100%, 26% 70%, 10% 100%, 0 67%, 0% 0%, 100% 0%, 100% 66%, 86% 89%, 79% 56%, 68% 100%, 59% 72%, 45% 68%);
+
+}
+
+section:nth-of-type(1) div:nth-of-type(1) div {
+	background-color:var(--snw-sun, #fff);
+}
+
+
+section:nth-of-type(1) div:nth-of-type(2) div {
+	background-color:var(--snw-shade, #ccd);
+}
+
+
+/*************/
+/* DE BERGEN */
+/*************/
+
+section:nth-of-type(1) li:nth-of-type(1) {
+	--height:20em;
+	--width:28em;
+	
+	--shade:70%;
+	--point:30%;
+	
+	--snow: 40%;
+	
+	--clr-sun:moccasin;
+	--clr-shade:saddlebrown;
+	
+	--snw-sun: #ff9;
+	--snw-shade: #cc6;
+
+    --left: 20vw;
+}
+</code>
+Hieronder kun je bij het list item de berg net zo maken zoals je zelf wilt door de custom property aan te passen. Wat de code robuuster maken en er voor zorgt dat er minder lines of code worden gebruikt. Dit heeft me enorm geholpen om de kwaliteit van zowel m'n code als m'n bergen vooruit te brengen. Ik moet nog wel veel doen zoals echt vuurwerk maken.
+
+functionaliteiten die ik nog wil toevoegen:
+- Light/Dark mode door middel van op de zon te klikken
+- Berg laten wegvliegen door erop te klikken (easter egg)
+- Vuurpijlen / Vuurdozen die wegvliegen (voetzoekers)
+- Responsive ( media queries om bergen te verwijderen wanneer scherm kleiner wordt)
