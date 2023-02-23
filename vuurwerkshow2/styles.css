@@ -1,0 +1,231 @@
+* {
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+
+html {
+    height: 100%;
+    width: 100vw;
+    overflow: hidden;
+}
+
+body { 
+    margin: 0;
+    background-color: #b4ddf0;
+    background-image: linear-gradient(#90D5EC, #b4ddf0);
+}
+
+header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    position: relative;
+    list-style-type: none;
+}
+
+nav ul li span {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: 'Zeyada', cursive;
+    font-size: 2rem;
+}
+
+nav ul input {
+    position: absolute;
+    opacity: 0.3;
+    visibility:hidden;
+}
+
+section {
+    width: 100vw;
+    height: 100vh;
+    background-color: #9bd822;
+}
+
+section:nth-child(2) {
+    background-color: #b4ddf0;
+}
+
+section:nth-child(3) {
+    background-color: #101517;
+}
+
+body:has(input[value="home"]:checked) main {
+    transform: translateX(-100vw);
+}
+
+body:has(input[value="links"]:checked) main {
+    transform: translateX(0);
+}
+
+body:has(input[value="rechts"]:checked) main {
+    transform: translateX(-200vw);
+}
+
+main {
+    width: 300vw;
+    display: flex;
+    transition: 1s ease-in-out;
+}
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!! Sectie 1 bergen !!!!!!!!!!!!!!!! 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/ 
+section:nth-of-type(1) ul {
+	display:flex;
+	align-items:end;
+	justify-content:center;
+	margin:0;
+	padding:0;
+	list-style:none;
+
+
+	background-color:transparent;
+}
+
+section:nth-of-type(1) li {
+	position:absolute;
+	bottom:15vw; 
+	width:var(--width, 10em);
+	height:var(--height, 10em);
+	
+	left:var(--left, 0);
+	z-index:var(--z-index, 0);
+}
+
+section:nth-of-type(1) li > div {
+	position:absolute;
+	inset:0;
+}
+
+section:nth-of-type(1) li > div:nth-of-type(1) {
+	background-color:var(--clr-sun, lightgreen);
+
+	clip-path: polygon(
+		var(--point, 50%) 0%, 
+		var(--shade, 50%) 100%, 
+		0% 100%, 
+		var(--point, 50%) 0%
+	);
+
+}
+
+section:nth-of-type(1) li > div:nth-of-type(2) {
+	background-color:var(--clr-shade, green);
+	
+	clip-path: polygon(
+		var(--point, 50%) 0%, 
+		var(--shade, 50%) 100%, 
+		100% 100%, 
+		var(--point, 50%) 0%
+	);
+
+}
+
+/* snow */
+section:nth-of-type(1) div div {
+	position:absolute;
+	width:100%;
+	height:var(--snow, 40%);
+}
+
+section:nth-of-type(1) div div {
+	clip-path: polygon(36% 100%, 26% 70%, 10% 100%, 0 67%, 0% 0%, 100% 0%, 100% 66%, 86% 89%, 79% 56%, 68% 100%, 59% 72%, 45% 68%);
+
+}
+
+section:nth-of-type(1) div:nth-of-type(1) div {
+	background-color:var(--snw-sun, #fff);
+}
+
+
+section:nth-of-type(1) div:nth-of-type(2) div {
+	background-color:var(--snw-shade, #ccd);
+}
+
+
+/*************/
+/* DE BERGEN */
+/*************/
+
+section:nth-of-type(1) li:nth-of-type(1) {
+	--height:20em;
+	--width:28em;
+	
+	--shade:70%;
+	--point:30%;
+	
+	--snow: 40%;
+	
+	--clr-sun:moccasin;
+	--clr-shade:saddlebrown;
+	
+	--snw-sun: #ff9;
+	--snw-shade: #cc6;
+
+    --left: 20vw;
+}
+
+section:nth-of-type(1) li:nth-of-type(2) {
+	--height:28em;
+	--width:36em;
+	
+	--shade:70%;
+	--point:30%;
+	
+	--snow: 40%;
+	
+	--clr-sun:red;
+	--clr-shade:saddlebrown;
+	
+	--snw-sun: #ff9;
+	--snw-shade: #cc6;
+
+    --left: 10vw;
+}
+
+section:nth-of-type(1) li:nth-of-type(3) {
+	--height:20em;
+	--width:30em;
+	
+	--shade:70%;
+	--point:30%;
+	
+	--snow: 40%;
+	
+	--clr-sun:blue;
+	--clr-shade:saddlebrown;
+	
+	--snw-sun: #ff9;
+	--snw-shade: #cc6;
+
+    --left: -7vw;
+}
+
+
+
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!! Sectie 2 bergen !!!!!!!!!!!!!!!! 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/ 
+
+
+
+
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!! Sectie 3 bergen !!!!!!!!!!!!!!!! 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/ 
+
