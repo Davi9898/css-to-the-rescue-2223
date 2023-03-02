@@ -234,3 +234,7 @@ functionaliteiten die ik nog wil toevoegen:
 - Berg laten wegvliegen door erop te klikken (easter egg)
 - Vuurpijlen / Vuurdozen die wegvliegen (voetzoekers)
 - Responsive ( media queries om bergen te verwijderen wanneer scherm kleiner wordt)
+
+## Week 3,5
+### Dag 1
+Deze dag ben ik de hele dag bezig geweest om de berglandschappen juist te krijgen, ik wilde voorheen drie verschillende berglandschappen maken. Dit zijn nu drie landschappen geworden met ongeveer dezelfde bergen. Alleen in dachlicht, zonsondergang en nacht. Ook heb ik verschillende veranderingen gemaakt. Met de huidige manier van bergen maken had ik toch wat complicaties met het responsive houden van de berg. Ik heb nu de height veranderd door een aspect ratio, ook schaalt de width ten opzichte van de parent nu in percentage. Hierdoor schalen de bergen mooi. Eigenlijk vind ik ze nu weer te klein wanneer je op een klein scherm zit. Hier kan ik misschien nog een draai aan geven.
