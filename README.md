@@ -1,11 +1,21 @@
 # Vuurwerkshow in berglandschap
+# Table of contents
+1. [Inleiding](#inleiding)
+2. [Week 1](#week1)
+3. [Week 2](#week2)
+5. [Week 3](#week3)
+6. [Week 3,5](#week3,5)
+7. [Week 4](#week4)
+8. [Realisatiepunten](#realisatiepunten)
+9. [Leerpunten](#leerpunten)
+
 https://davi9898.github.io/css-to-the-rescue-2223/vuurwerkshow2
-# Week 1
 
-
-### Inleiding
+### Inleiding <a name="inleiding"></a>
 
 Voor het vak CSS to the rescue ga ik een vuurwerkshow maken. De bedoeling is dat deze interactief is en door middel van klikken afgevuurd kan worden. Het vuurwerk moet op de voorgrond gebeuren. Het werk zal in 2D gemaakt worden. Op de achtergrond zal een berg landschap te zien. Om het gebied groter te maken dan één scherm, ga ik proberen om een optie toe te voegen waardoor je een viewport width naar links en rechts kan. Dit zou bijvoorbeeld door een button gebeuren of door te scrollen met je muis.
+
+# Week 1 <a name="week1"></a>
 
 ### Onderzoek 
 
@@ -26,7 +36,7 @@ functionaliteiten:
 
 Je ziet hier hoe de drie verschillende views ontworpen moeten worden. Ook zie je de klikbare pijlen die voor interactie zorgen.
 
-## Week 2
+## Week 2 <a name="week2"></a>
 
 Deze week heb ik de lessen gemist omdat ik ziek was. Ondertussen ben ik thuis wel verder gaan werken aan mijn berglandschap
 
@@ -110,7 +120,7 @@ section:nth-of-type(1) > div:first-of-type > div:nth-of-type(2) { /* De schaduw 
 ### Feedback
 Sanne heeft aangegeven dat ik custom properties kan toepassen, dat dit mij zal helpen. 
 
-## Week 3
+## Week 3 <a name="week3"></a>
 
 ### Dag 1
 Op dag 1 van Week 3 heeft Sanne s'ochtends een gastcollege gegeven. Deze heb ik helaas niet kunnen bijwonen omdat ik een afspraak had in de ochtend. Vervolgens ben ik verder gegaan met het plaatsen van de verchillende bergen in het landschap. Ik ben vervolgens een cursus gaan volgen over het gebruik van SVG paden. We hebben het voornamelijk gehad over de offset-path: path; functie die CSS heeft te bieden. Hoe je een SVG path kan maken in bijvoorbeeld Figma en vervolgens kan exporteren. Deze open je dan als een txt bestand en hier kan je het SVG path uithalen. Wat ik ook erg interessant vond is het toevoegen van een delay aan een transition. Dit heb ik zelf nog nooit gebruik en was mij er ook niet van bewust dat dit mogelijk was. 
@@ -234,7 +244,7 @@ functionaliteiten die ik nog wil toevoegen:
 - Vuurpijlen / Vuurdozen die wegvliegen (voetzoekers)
 - Responsive ( media queries om bergen te verwijderen wanneer scherm kleiner wordt)
 
-## Week 3,5
+## Week 3,5  <a name="week3,5"></a>
 ### Dag 1
 Deze dag ben ik de hele dag bezig geweest om de berglandschappen juist te krijgen, ik wilde voorheen drie verschillende berglandschappen maken. Dit zijn nu drie landschappen geworden met ongeveer dezelfde bergen. Alleen in dachlicht, zonsondergang en nacht. Ook heb ik verschillende veranderingen gemaakt. Met de huidige manier van bergen maken had ik toch wat complicaties met het responsive houden van de berg. Ik heb nu de height veranderd door een aspect ratio, ook schaalt de width ten opzichte van de parent nu in percentage. Hierdoor schalen de bergen mooi. Eigenlijk vind ik ze nu weer te klein wanneer je op een klein scherm zit. Hier kan ik misschien nog een draai aan geven.
 
@@ -255,7 +265,7 @@ Deze dag ben ik bezig geweest het maken van media queries voor de bergen. Ik laa
     display: none;
   }
 ```
-## Week 4
+## Week 4 <a name="week4"></a>
 ### Dag 1
 Deze eerste dag van de laatste week ben ik bezig gegaan met het maken van vuurwerk. Ik had bedacht om pijlen te maken die vervolgens de lucht in schieten als er op een button gedrukt wordt. 
 Pijl: 
@@ -322,4 +332,17 @@ body:has(section:nth-of-type(1) #animate1:checked)
 }
 ```
 Na het formatteren van mijn document is de vuurwerkshow afgerond
+
+### Realisatiepunten <a name="realisatiepunten"></a>
+Er zijn enkele punten die leuk waren geweest om te implementeren maar waar ik niet aan toe ben gekomen door tijdgebrek:
+* Per dagdeel een verschillende show
+* Bergen die wegvliegen (easter egg)
+
+### Leerpunten <a name="leerpunten"></a>
+* Selectors goed gebruiken
+* ::before ::after
+* :has()
+* Custom properties
+* Bergjes maken
+* Semantisch HTML
 
