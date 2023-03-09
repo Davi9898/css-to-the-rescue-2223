@@ -32,7 +32,7 @@ Deze week heb ik de lessen gemist omdat ik ziek was. Ondertussen ben ik thuis we
 
 ### Dag 1
 Op dag één ben ik bezig gegaan om de schermen 100vw naar links en naar rechts te laten bewegen. Dit heb ik gedaan door een translateX(-200vw -> 100vw) toe te passen. Dit heeft me wel even geduurd voordat me dit lukte, ik liep de heletijd tegen problemen aan. Ook wilde ik graag dat de gebruiker landde op de home page. Hieronder kun je zien hoe ik dit heb aangepakt:
-<code>
+```
 body:has(input[value="home"]:checked) main {
     transform: translateX(-100vw);
 }
@@ -44,9 +44,9 @@ body:has(input[value="links"]:checked) main {
 body:has(input[value="rechts"]:checked) main {
     transform: translateX(-200vw);
 }
-</code>
+```
 Hier zie je de labels en de radio buttons hoe die zijn gestructureerd:
-<code>
+```
     <li>
                     <label for="links">
                         <span>Links</span>
@@ -65,7 +65,7 @@ Hier zie je de labels en de radio buttons hoe die zijn gestructureerd:
                     <label for="rechts">
                         <input type="radio" id="rechts" name="nav" value="rechts" />
                     </label>
-</code>
+```
 
 ### Dag 2
 Op dag 2 ben ik mij gaan richten op het volledig focusen van het maken van het berglandschap. Ik heb eerst gekeken hoe ik de bergen kon gaan maken. Ik had eerder wel eens driehoekbergen gemaakt en piramides bij een cursus van Sanne. Dit kon ik mooi gebruiken. Natuurlijk heb ik ook inspiratie gebruikt van het internet.
@@ -73,7 +73,7 @@ Op dag 2 ben ik mij gaan richten op het volledig focusen van het maken van het b
 ### Bergjes
 
 De bergen heb ik gemaakt door gebruik te maken van de volgende code:
-<code>
+```
 section:nth-of-type(1) > div:first-of-type { /* container, hiermee kan ik de berg gemakkelijk bewegen */ 
     position: absolute;
     bottom: 30vh;
@@ -105,7 +105,7 @@ section:nth-of-type(1) > div:first-of-type > div:nth-of-type(2) { /* De schaduw 
     transform-origin: top right;
     transform: skewX(18deg);
 }
-</code>
+```
 
 ### Feedback
 Sanne heeft aangegeven dat ik custom properties kan toepassen, dat dit mij zal helpen. 
@@ -127,7 +127,7 @@ functionaliteiten die ik nog wil toevoegen:
 Op dag 2 zijn we begonnen met een gastcollege van Manuel Matuzovic. Manuel is schrijver van het blog 100days of More or less modern CSS, hij heeft ons allerlei epische properties laten zien die CSS met zich mee draagt. Vervolgens ben ik met Sanne gaan zitten om te kijken naar custom properties. Ik kreeg een privé sessie omdat niemand anders zich hiervoor had aangemeld. Hierin gingen we mijn huidge bergen transformeren met een border-width zodat we custom properties makkelijk konden gebruiken. Hier stak ik veel van op en kreeg ik door hoe ik deze functionaliteit kan toepassen. 
 
 Vervolgens lukte het me niet om het ijstopje op de berg te plaatsen op de manier waarop we nu de bergen hadden ge hercreëerd. Sanne vond de manier waarop het ging sowieso al lelijk volgensmij dus had hij het geniale idee om nogmaals de bergen te transformeren naar een nieuw landschap. Dit keer met bergen met wel een sneeuwstukje er boven op. Hieronder valt te zien hoe we dit gedaan hebben.
-<code>
+```
 
 /*************/
 /* SETTINGS  */
@@ -226,11 +226,10 @@ section:nth-of-type(1) li:nth-of-type(1) {
 
     --left: 20vw;
 }
-</code>
+```
 Hieronder kun je bij het list item de berg net zo maken zoals je zelf wilt door de custom property aan te passen. Wat de code robuuster maken en er voor zorgt dat er minder lines of code worden gebruikt. Dit heeft me enorm geholpen om de kwaliteit van zowel m'n code als m'n bergen vooruit te brengen. Ik moet nog wel veel doen zoals echt vuurwerk maken.
 
 functionaliteiten die ik nog wil toevoegen:
-- Light/Dark mode door middel van op de zon te klikken
 - Berg laten wegvliegen door erop te klikken (easter egg)
 - Vuurpijlen / Vuurdozen die wegvliegen (voetzoekers)
 - Responsive ( media queries om bergen te verwijderen wanneer scherm kleiner wordt)
@@ -238,3 +237,21 @@ functionaliteiten die ik nog wil toevoegen:
 ## Week 3,5
 ### Dag 1
 Deze dag ben ik de hele dag bezig geweest om de berglandschappen juist te krijgen, ik wilde voorheen drie verschillende berglandschappen maken. Dit zijn nu drie landschappen geworden met ongeveer dezelfde bergen. Alleen in dachlicht, zonsondergang en nacht. Ook heb ik verschillende veranderingen gemaakt. Met de huidige manier van bergen maken had ik toch wat complicaties met het responsive houden van de berg. Ik heb nu de height veranderd door een aspect ratio, ook schaalt de width ten opzichte van de parent nu in percentage. Hierdoor schalen de bergen mooi. Eigenlijk vind ik ze nu weer te klein wanneer je op een klein scherm zit. Hier kan ik misschien nog een draai aan geven.
+
+functionaliteiten die ik nog wil toevoegen:
+- Berg laten wegvliegen door erop te klikken (easter egg)
+- Vuurpijlen / Vuurdozen die wegvliegen (voetzoekers)
+- Responsive ( media queries om bergen te verwijderen wanneer scherm kleiner wordt)
+
+### Dag 2
+Deze dag ben ik bezig geweest het maken van media queries voor de bergen. Ik laat nu doormiddel van media queries bergen verdwijnen. Eigenlijk loopt het allemaal nog niet helemaal lekker maar door tijdgebrek ben ik genoodzaakt om verder te gaan.
+
+```
+@media only screen and (max-width: 800px) {
+  section:nth-of-type(1) li:nth-of-type(1),
+  section:nth-of-type(1) li:nth-of-type(3),
+  section:nth-of-type(1) li:nth-of-type(8),
+  section:nth-of-type(1) li:nth-of-type(11) {
+    display: none;
+  }
+```
