@@ -255,3 +255,71 @@ Deze dag ben ik bezig geweest het maken van media queries voor de bergen. Ik laa
     display: none;
   }
 ```
+## Week 4
+### Dag 1
+Deze eerste dag van de laatste week ben ik bezig gegaan met het maken van vuurwerk. Ik had bedacht om pijlen te maken die vervolgens de lucht in schieten als er op een button gedrukt wordt. 
+Pijl: 
+```
+section:nth-of-type(1) > ul:nth-of-type(2) li div:nth-of-type(1) {
+  position: absolute;
+  width: 30px;
+  height: var(--kopheight, 15px);
+  background-color: var(--kopkleur, red);
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  right: 0px;
+  z-index: 10;
+  transform: scaleX(0.5);
+}
+
+/* stok element */
+
+section:nth-of-type(1) > ul:nth-of-type(2) li div:nth-of-type(2) {
+  position: absolute;
+  width: var(--stokwidth, 10px);
+  height: var(--stokheight, 60px);
+  background: repeating-linear-gradient(
+    45deg,
+    var(--stokgradientkleur1, #ffffff),
+    var(--stokgradientkleur1, #ffffff) 10px,
+    var(--stokgradientkleur2, #ff0000) 10px,
+    var(--stokgradientkleur2, #ff0000) 20px
+  );
+  top: 14px;
+  border-radius: 2px;
+}
+```
+Deze worden dan individueel gepositioneerd en vervolgens door dat er aan het list item een transform hangt. Kunnen ze de lucht in geschoten worden.
+
+### Dag 2
+Op dag 2 heb ik de explosie toegevoegd. De bedoeling is dat de explosie in de verte zichtbaar wordt. De explosies komen nadat de laatste pijl is afgevuurd. Ik heb hier een bron voor gebruikt: https://codepen.io/MinzCode/pen/abmwmOG. Wanneer het label van de desbetreffende pagina aangeklikt wordt door de gebruiker. Dan gaan eerste de pijlen en vervolgens door een animation delay volgen de explosies.
+```
+body:has(section:nth-of-type(1) #animate1:checked)
+  section:nth-of-type(1)
+  > div:nth-of-type(3)
+  > div::before,
+body:has(section:nth-of-type(1) #animate1:checked)
+  section:nth-of-type(1)
+  > div:nth-of-type(4)
+  > div::before,
+body:has(section:nth-of-type(1) #animate1:checked)
+  section:nth-of-type(1)
+  > div:nth-of-type(5)
+  > div::before,
+body:has(section:nth-of-type(1) #animate1:checked)
+  section:nth-of-type(1)
+  > div:nth-of-type(6)
+  > div::before,
+body:has(section:nth-of-type(1) #animate1:checked)
+  section:nth-of-type(1)
+  > div:nth-of-type(7)
+  > div::before,
+body:has(section:nth-of-type(1) #animate1:checked)
+  section:nth-of-type(1)
+  > div:nth-of-type(8)
+  > div::before {
+  animation: explosion 2s ease-in-out 3;
+  animation-delay: 3s;
+}
+```
+Na het formatteren van mijn document is de vuurwerkshow afgerond
+
