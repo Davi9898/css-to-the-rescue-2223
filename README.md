@@ -1,5 +1,5 @@
 # Vuurwerkshow in berglandschap
-https://davi9898.github.io/css-to-the-rescue-2223/vuurwerkshow
+https://davi9898.github.io/css-to-the-rescue-2223/vuurwerkshow2
 # Week 1
 
 
