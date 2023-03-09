@@ -1,6 +1,7 @@
+# Vuurwerkshow in berglandschap
+
 <img src="images/voorkant.png" width=1000px>
 
-# Vuurwerkshow in berglandschap
 # Table of contents
 1. [Inleiding](#inleiding)
 2. [Week 1](#week1)
